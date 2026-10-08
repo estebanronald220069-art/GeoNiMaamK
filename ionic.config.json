@@ -1,0 +1,7 @@
+{
+  "name": "GeoLocationApp",
+  "type": "angular-standalone",
+  "integrations": {
+    "capacitor": {}
+  }
+}
