@@ -1,0 +1,37 @@
+<ion-header>
+  <ion-toolbar color="primary">
+    <ion-title>My Location</ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content class="ion-padding">
+  <ion-card>
+    <ion-card-header>
+      <ion-card-title>Geolocation App</ion-card-title>
+      <ion-card-subtitle>Find your current location</ion-card-subtitle>
+    </ion-card-header>
+    <ion-card-content>
+      <ion-button expand="block" (click)="getCurrentLocation()">
+        Get My Location
+      </ion-button>
+      <ion-button expand="block" fill="outline" (click)="clearLocation()">
+        Clear Location
+      </ion-button>
+    </ion-card-content>
+  </ion-card>
+
+  @if (latitude !== null) {
+    <ion-card>
+      <ion-card-header>
+        <ion-card-title>Location Information</ion-card-title>
+      </ion-card-header>
+      <ion-card-content>
+        <p><strong>Latitude:</strong> {{ latitude }}</p>
+        <p><strong>Longitude:</strong> {{ longitude }}</p>
+        <p><strong>Accuracy:</strong> {{ accuracy }} meters</p>
+      </ion-card-content>
+    </ion-card>
+  }
+
+  <div id="map"></div>
+</ion-content>
